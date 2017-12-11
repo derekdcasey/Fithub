@@ -235,6 +235,7 @@
     <Content Include="Content\framework7.rtl.md.css" />
     <Content Include="Content\framework7.rtl.md.min.css" />
     <Content Include="Content\framework7.rtl.min.css" />
+    <Content Include="Content\HomePage.css" />
     <Content Include="Content\my-app.css" />
     <Content Include="Content\PagedList.css" />
     <Content Include="Content\styles.css" />

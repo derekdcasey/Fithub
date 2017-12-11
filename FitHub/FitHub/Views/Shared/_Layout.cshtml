@@ -11,11 +11,13 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <!-- Your app title -->
     <title>Index</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
     <!-- Path to Framework7 iOS CSS theme styles-->
     <!-- Path to Framework7 iOS related color styles -->
     <link rel="stylesheet" href="~/Content/framework7.material.css">
     <link rel="stylesheet" href="~/Content/framework7.material.colors.css">
-
+    <link rel="stylesheet" href="~/Content/HomePage.css">
     <link rel="stylesheet" href="~/Content/framework7-icons.css">
     <!-- Path to your custom app styles-->
     <link rel="stylesheet" href="~/Content/my-app.css">
@@ -162,6 +164,9 @@
 
     <!-- Path to your app js-->
     <script type="text/javascript" src="~/Scripts/my-app.js"></script>
-
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/jqueryval")
+    @RenderSection("scripts", required: false)
 </body>
 </html>              

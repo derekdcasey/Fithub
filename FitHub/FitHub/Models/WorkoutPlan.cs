@@ -11,5 +11,6 @@ namespace FitHub.Models
         public int UserId { get; set; }
         public int UserFavorite { get; set; }
         public List<Workout> Workouts { get; set; }
+        public string BgImagePath { get; set; }
     }
 }
