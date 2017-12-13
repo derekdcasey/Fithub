@@ -1,0 +1,56 @@
+﻿
+@model FitHub.ViewModels.NewWorkoutPlanViewModel
+@{
+    ViewBag.Title = "New Workout Plan";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="content-block">
+    <h2>Create Workout Plan</h2>
+</div>
+
+
+
+
+@using (Html.BeginForm("CreatePlan", "Workouts", new { @enctype = "multipart/form-data" }))
+{
+    <div class="list-block">
+
+        <div class="form-group">
+            <div class="col-md-10">
+                <p>Add a background image</p>
+                <input type="file" name="files" multiple />
+            </div>
+        </div>
+        <ul>
+  
+            <li>
+                <div class="item-content">
+                    <div class="item-inner">
+                        <div class="item-title">Title</div>
+                        <div class="item-input">
+                            @Html.TextBoxFor(m => m.WorkoutPlan.Title, new { @placeholder = "Title"})
+                        </div>
+                    </div>
+                </div>
+            </li>
+          
+            <li class="align-top">
+                <div class="item-content">
+                    <div class="item-inner">
+
+                        <div class="item-input">
+                            @Html.TextAreaFor(m => m.WorkoutPlan.Description, new { @placeholder = "Add Description", @rows = "100", @cols = "100", @class = "resizeable" })
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <div class="content-block">
+                <div class="row">
+                    <div class="col-50">@Html.ActionLink("Cancel", "Index", "Workouts", new {@class="btn btn-block btn-lg btn-danger external" })</div>
+                    <div class="col-50"><button type="submit" style="margin:0 auto;" class="btn btn-block btn-lg btn-primary">Continue</button></div>
+                </div>
+            </div>
+            </ul>
+</div>
+            }

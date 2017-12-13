@@ -366,3 +366,9 @@ D:\Code\repos\FitHub\FitHub\FitHub\bin\Microsoft.AI.Web.xml
 D:\Code\repos\FitHub\FitHub\FitHub\obj\Debug\FitHub.csprojResolveAssemblyReference.cache
 D:\Code\repos\FitHub\FitHub\FitHub\obj\Debug\FitHub.dll
 D:\Code\repos\FitHub\FitHub\FitHub\obj\Debug\FitHub.pdb
+D:\Code\repos\FitHub\FitHub\FitHub\obj\Debug\FitHub.Migrations.InitialModels.resources
+D:\Code\repos\FitHub\FitHub\FitHub\obj\Debug\FitHub.csproj.GenerateResource.Cache
+D:\Code\repos\FitHub\FitHub\FitHub\obj\Debug\FitHub.Migrations.FavoritesAdded.resources
+D:\Code\repos\FitHub\FitHub\FitHub\obj\Debug\FitHub.Migrations.modelsChanged.resources
+D:\Code\repos\FitHub\FitHub\FitHub\obj\Debug\FitHub.Migrations.moreModelChanges.resources
+D:\Code\repos\FitHub\FitHub\FitHub\obj\Debug\FitHub.Migrations.WpIdAdded.resources

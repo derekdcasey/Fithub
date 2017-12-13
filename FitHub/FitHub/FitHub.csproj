@@ -204,14 +204,37 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712121425152_InitialModels.cs" />
+    <Compile Include="Migrations\201712121425152_InitialModels.Designer.cs">
+      <DependentUpon>201712121425152_InitialModels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712121426082_FavoritesAdded.cs" />
+    <Compile Include="Migrations\201712121426082_FavoritesAdded.Designer.cs">
+      <DependentUpon>201712121426082_FavoritesAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712121702109_modelsChanged.cs" />
+    <Compile Include="Migrations\201712121702109_modelsChanged.Designer.cs">
+      <DependentUpon>201712121702109_modelsChanged.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712121918287_moreModelChanges.cs" />
+    <Compile Include="Migrations\201712121918287_moreModelChanges.Designer.cs">
+      <DependentUpon>201712121918287_moreModelChanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712122000376_WpIdAdded.cs" />
+    <Compile Include="Migrations\201712122000376_WpIdAdded.Designer.cs">
+      <DependentUpon>201712122000376_WpIdAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Exercise.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\UserFavorite.cs" />
     <Compile Include="Models\Workout.cs" />
     <Compile Include="Models\WorkoutPlan.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\NewWorkoutPlanViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -303,12 +326,15 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_F7Template.cshtml" />
+    <Content Include="Views\Workouts\NewWorkout.cshtml" />
+    <Content Include="Views\Workouts\NewPlan.cshtml" />
+    <Content Include="Views\Workouts\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutWorkOutTabs.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Exercises\" />
     <Folder Include="Views\WorkoutPlans\" />
-    <Folder Include="Views\Workouts\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -322,6 +348,23 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201712121425152_InitialModels.resx">
+      <DependentUpon>201712121425152_InitialModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712121426082_FavoritesAdded.resx">
+      <DependentUpon>201712121426082_FavoritesAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712121702109_modelsChanged.resx">
+      <DependentUpon>201712121702109_modelsChanged.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712121918287_moreModelChanges.resx">
+      <DependentUpon>201712121918287_moreModelChanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712122000376_WpIdAdded.resx">
+      <DependentUpon>201712122000376_WpIdAdded.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

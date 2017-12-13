@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- Your app title -->
+    <title>Index</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <!-- Path to Framework7 iOS CSS theme styles-->
+    <!-- Path to Framework7 iOS related color styles -->
+    <link rel="stylesheet" href="~/Content/framework7.material.css">
+    <link rel="stylesheet" href="~/Content/framework7.material.colors.css">
+    <link rel="stylesheet" href="~/Content/HomePage.css">
+    <link rel="stylesheet" href="~/Content/framework7-icons.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="~/Content/my-app.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        .demo-card-header-pic .card-header {
+            height: 30vw;
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Status bar overlay for full screen mode (PhoneGap) -->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+        <div class="content-block">
+
+       
+
+            <!--NAV AREA -->
+            <div class="list-block">
+                <ul>
+                    <li>
+                        <a href="/products/list" class="item-link item-content external">
+                            <div class="item-media"><i class="icon icon-f7"></i></div>
+                            <div class="item-inner">
+                                <div class="item-title">My Profile</div>
+
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/stores/list" class="item-link item-content external">
+                            <div class="item-media"><i class="icon icon-f7"></i></div>
+                            <div class="item-inner">
+                                <div class="item-title">Workout Plans</div>
+
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/price/list" class="item-link item-content external">
+                            <div class="item-media"><i class="icon icon-f7"></i></div>
+                            <div class="item-inner">
+                                <div class="item-title">Exercises</div>
+
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/price/list" class="item-link item-content external">
+                            <div class="item-media"><i class="icon icon-f7"></i></div>
+                            <div class="item-inner">
+                                <div class="item-title">Progress Logs</div>
+
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- Views -->
+
+    <div class="views  layout-white">
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+           
+
+            <!-- Speed Dial Wrap -->
+            <div class="speed-dial">
+                <!-- FAB inside will open Speed Dial actions -->
+                <a href="#" class="floating-button">
+                    <!-- First icon is visible when Speed Dial actions are closed -->
+                    <i class="icon icon-plus"></i>
+                    <!-- Second icon is visible when Speed Dial actions are opened -->
+                    <i class="icon icon-close"></i>
+                </a>
+                <!-- Speed Dial Actions -->
+                <div class="speed-dial-buttons">
+                    <!-- First Speed Dial button add price -->
+                    <a href="/price/add" class="external">
+                        <i class="icon f7-icons">money_dollar</i>
+                    </a>
+                    <!-- Second Speed Dial add product button -->
+                    <a href="/products/add" class="external">
+                        <i class="icon f7-icons">bag</i>
+                    </a>
+                    <!-- Third Speed Dial add store button -->
+                    <a href="/stores/add" class="external">
+                        <i class="icon f7-icons">world</i>
+                    </a>
+                </div>
+            </div>
+            <!-- End of Speed Dial -->
+          
+           
+
+            <!-- Top Navbar-->
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+
+                   
+
+                    <div class="right">
+                        <!--
+                          Right link contains only icon - additional "icon-only" class
+                          Additional "open-panel" class tells app to open panel when we click on this link
+                        -->
+                        <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+                    </div>
+                </div>
+            </div>
+      
+            <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+            <div class="pages navbar-through toolbar-through">
+                <!-- Page, "data-page" contains page name -->
+                <div data-page="index" class="page">
+                    <!-- Scrollable page content -->
+                   
+                    <div class="page-content  layout-white">
+                       
+                        @RenderBody()
+                        <!-- content goes here -->
+                      
+                       
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom Toolbar-->
+            <div class="toolbar">
+                <div class="toolbar-inner">
+                    <!-- Toolbar links -->
+                    <div class="content-block">
+                        <a href="/" class="external color-white"></a>
+                    </div>
+                    <a href="#" class="link">Link 2</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="~/Scripts/framework7.min.js"></script>
+
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="~/Scripts/my-app.js"></script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/jqueryval")
+    @RenderSection("scripts", required: false)
+</body>
+</html>              

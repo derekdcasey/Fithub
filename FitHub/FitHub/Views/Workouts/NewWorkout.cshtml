@@ -1,0 +1,151 @@
+﻿@model FitHub.ViewModels.NewWorkoutPlanViewModel
+@{
+    ViewBag.Title = "New Workout";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="content-block">
+    <h2>New Workout</h2>
+    <p><a href="#" data-popup=".popup-about" class="open-popup">Add Notes </a></p>
+</div>
+
+
+
+
+@using (Html.BeginForm("CreateWorkout", "Workouts"))
+{
+
+    <div class="list-block">
+        <ul>
+            <li>
+                <div class="item-content">
+                    <div class="item-inner">
+                        <div class="item-title">Workout Plan</div>
+                        <div class="item-input">
+                            @Html.DropDownListFor(m => m.Workout.WorkoutPlanId, new SelectList(Model.WorkoutPlans, "Id", "Title"), "Which Workout")
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="item-content">
+                    <div class="item-inner">
+                        <div class="item-title">Day Number</div>
+                        <div class="item-input">
+                            @Html.TextBoxFor(m => m.Workout.DayNumber, new { @placeholder = "Workout Day", @type = "number", @min = "1", @max = "60" })
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <!-- Additional "smart-select" class -->
+                <a href="#" class="item-link smart-select" data-back-on-select="true" data-searchbar="true" data-searchbar-placeholder="Search Exercises">
+                    <!-- select -->
+
+                    @Html.DropDownListFor(m => m.Workout.ExerciseId, new SelectList(Model.Exercises, "Id", "Name"), "What Exercise?")
+                   
+                    <div class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title">Exercises</div>
+                            <!-- Select label -->
+                            
+                        </div>
+                    </div>
+                </a>
+            </li>
+
+
+
+
+
+            <li>
+                <div class="item-content">
+                    <div class="item-inner">
+                        <div class="item-title">Reps</div>
+                        <div class="item-input">
+                            @Html.TextBoxFor(m => m.Workout.Reps, new { @placeholder = "Repetitions", @type = "number" })
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="item-content">
+                    <div class="item-inner">
+                        <div class="item-title">Sets</div>
+                        <div class="item-input">
+                            @Html.TextBoxFor(m => m.Workout.Sets, new { @placeholder = "Sets", @type = "number" })
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="item-content">
+                    <div class="item-inner">
+                        <div class="item-title">Rest Time In Seconds</div>
+                        <div class="item-input">
+                            @Html.TextBoxFor(m => m.Workout.RestInSeconds, new { @placeholder = "Rest Time Seconds" })
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div class="item-content">
+                    <div class="item-title">Superset?</div>
+                    <div class="item-input">
+                        <div class="checkbox">
+                            <label style="font-size:large;">
+                                @Html.CheckBoxFor(m => m.Workout.IsSuperSet, new { })
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- About Popup -->
+            <div class="popup popup-about">
+                <div class="content-block">
+                    <p>Notes</p>
+                    
+                    
+                    <div class="list-block">
+                        <ul>
+                            
+                            <!-- Additional "align-top" class for correct textarea alignment -->
+                            <li class="align-top">
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                       
+                                        <div class="item-input">
+                                            @Html.TextAreaFor(m => m.Workout.Note, new { @placeholder = "Add notes for this workout", @rows = "100", @cols = "100", @class = "resizeable" })
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <p><a href="#" class="close-popup">Close Notes</a></p>
+                </div>
+            </div>
+
+            @Html.HiddenFor(m => m.Workout.WorkoutPlanId)
+
+
+            <div class="content-block">
+                <div class="row">
+                    <div class="col-50"><button type = "submit" class="btn btn-block btn-lg btn-primary">Add More</button></div>
+                    <div class="col-50"><button type = "submit" style="margin:0 auto;" class="btn btn-block btn-lg btn-primary">Finished</button></div>
+                </div>
+            </div>
+
+        </ul>
+    </div>
+
+
+
+
+
+}
+<div class="content-block">&nbsp;</div>
