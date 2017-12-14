@@ -24,13 +24,20 @@
                                     <div class="item-title">@workout.Exercise.Name</div>
                                     <div class="item-after">@workout.DayNumber</div>
                                 </div>
-                                <div class="item-subtitle">@workout.Sets SETS of @workout.Reps REPS, REST @workout.RestInSeconds Secs </div>
+                                <div class="item-subtitle">@workout.Sets SETS of @workout.Reps REPS, @if (workout.IsSuperSet == false)
+                                { <span>REST @workout.RestInSeconds Secs</span> }
+                                else
+                                { <span>Superset with</span>}</div>
                             </div>
                         </li>
                     }
                     else
                     {
+                        while(workout.DayNumber != count)
+                        {
                         count++;
+                        }
+
                 <li class="item-content"><div class="item-inner">Day @count</div></li>
                 <li class="item-content">
                     <div class="item-media">

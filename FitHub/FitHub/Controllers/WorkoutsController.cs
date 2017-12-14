@@ -63,7 +63,7 @@ namespace FitHub.Controllers
             };
             return View(viewModel);
         }
-
+         
         [HttpPost]
         public ActionResult CreatePlan(WorkoutPlan workoutPlan)
         {

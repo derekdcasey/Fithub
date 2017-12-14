@@ -10,12 +10,13 @@ namespace FitHub.Models
     {
         public int Id { get; set; }
         public int UserId { get; set; }
+        public string Level { get; set; }
         [Required]
         public string Title { get; set; }
         [Required]
         public string Description { get; set; }
         public List<Workout> Workouts { get; set; }
-        public int WorkoutId { get; set; }
+        
         public string BgImagePath { get; set; }
     }
 }

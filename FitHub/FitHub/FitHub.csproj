@@ -228,6 +228,14 @@
     <Compile Include="Migrations\201712140435111_workoutsIdAdded.Designer.cs">
       <DependentUpon>201712140435111_workoutsIdAdded.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712141452570_modelsUpdated.cs" />
+    <Compile Include="Migrations\201712141452570_modelsUpdated.Designer.cs">
+      <DependentUpon>201712141452570_modelsUpdated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712141457375_modelsUpdated2.cs" />
+    <Compile Include="Migrations\201712141457375_modelsUpdated2.Designer.cs">
+      <DependentUpon>201712141457375_modelsUpdated2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Exercise.cs" />
@@ -375,6 +383,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712140435111_workoutsIdAdded.resx">
       <DependentUpon>201712140435111_workoutsIdAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712141452570_modelsUpdated.resx">
+      <DependentUpon>201712141452570_modelsUpdated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712141457375_modelsUpdated2.resx">
+      <DependentUpon>201712141457375_modelsUpdated2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
