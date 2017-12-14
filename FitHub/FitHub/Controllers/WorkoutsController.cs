@@ -25,14 +25,19 @@ namespace FitHub.Controllers
         }
         public ActionResult Details(int id)
         {
+           var workouts = _context.Workouts.Where(t => t.WorkoutPlanId ==  id).Include(m=>m.Exercise).ToList();
+            var workoutPlan = _context.WorkoutPlans.SingleOrDefault(m => m.Id == id);
 
-            var workout = _context.WorkoutPlans.Include(m => m.Workouts).SingleOrDefault(m => m.Id == id);
-
-            if (workout == null)
+            if (workoutPlan == null)
                 return HttpNotFound();
 
-            return View(workout);
-            
+            var viewModel = new NewWorkoutPlanViewModel
+            {
+                Workouts = workouts,
+                WorkoutPlan = workoutPlan
+            };
+            return View(viewModel);
+
         }
 
         public ActionResult NewPlan()
@@ -72,8 +77,10 @@ namespace FitHub.Controllers
         [HttpPost]
         public ActionResult CreateWorkout(Workout workout)
         {
+           
             
             _context.Workouts.Add(workout);
+
             _context.SaveChanges();
 
             return RedirectToAction("NewWorkout", "Workouts");

@@ -21,14 +21,15 @@
     <div id="tab1" class="tab active">
         <div class="content-block">
            @foreach (var w in Model)
-{
+           {
+          
     <div class="card demo-card-header-pic">
         <div style="background-image:url('https://wallpapertag.com/wallpaper/full/9/2/7/448118-bodybuilding-wallpaper-hd-2017-1920x1200-download-free.jpg');" valign="bottom" class="card-header color-white no-border">@w.Title</div>
         <div class="card-content">
 
         </div>
         <div class="card-footer">
-            <p>jhg</p>
+            @Html.ActionLink("View", "Details", "Workouts", new { id = w.Id }, null)
             <p>tytt</p>
             <p>test</p>
             <p>tytt</p>

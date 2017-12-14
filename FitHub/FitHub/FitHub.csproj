@@ -224,6 +224,10 @@
     <Compile Include="Migrations\201712122000376_WpIdAdded.Designer.cs">
       <DependentUpon>201712122000376_WpIdAdded.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712140435111_workoutsIdAdded.cs" />
+    <Compile Include="Migrations\201712140435111_workoutsIdAdded.Designer.cs">
+      <DependentUpon>201712140435111_workoutsIdAdded.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Exercise.cs" />
@@ -268,6 +272,9 @@
     <Content Include="Content\Site.css" />
     <Content Include="Images\cardio.png" />
     <Content Include="Images\exercises.png" />
+    <Content Include="Images\bg1.jpeg" />
+    <Content Include="Images\bg2.jpeg" />
+    <Content Include="Images\bg3.jpeg" />
     <Content Include="Images\stats.png" />
     <Content Include="Images\weights.png" />
     <Content Include="Scripts\bootstrap.js" />
@@ -330,6 +337,7 @@
     <Content Include="Views\Workouts\NewPlan.cshtml" />
     <Content Include="Views\Workouts\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutWorkOutTabs.cshtml" />
+    <Content Include="Views\Workouts\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -364,6 +372,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712122000376_WpIdAdded.resx">
       <DependentUpon>201712122000376_WpIdAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712140435111_workoutsIdAdded.resx">
+      <DependentUpon>201712140435111_workoutsIdAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

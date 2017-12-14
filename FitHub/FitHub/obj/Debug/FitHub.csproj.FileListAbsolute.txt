@@ -372,3 +372,4 @@ D:\Code\repos\FitHub\FitHub\FitHub\obj\Debug\FitHub.Migrations.FavoritesAdded.re
 D:\Code\repos\FitHub\FitHub\FitHub\obj\Debug\FitHub.Migrations.modelsChanged.resources
 D:\Code\repos\FitHub\FitHub\FitHub\obj\Debug\FitHub.Migrations.moreModelChanges.resources
 D:\Code\repos\FitHub\FitHub\FitHub\obj\Debug\FitHub.Migrations.WpIdAdded.resources
+D:\Code\repos\FitHub\FitHub\FitHub\obj\Debug\FitHub.Migrations.workoutsIdAdded.resources

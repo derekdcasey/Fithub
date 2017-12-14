@@ -15,6 +15,7 @@ namespace FitHub.Models
         [Required]
         public string Description { get; set; }
         public List<Workout> Workouts { get; set; }
+        public int WorkoutId { get; set; }
         public string BgImagePath { get; set; }
     }
 }

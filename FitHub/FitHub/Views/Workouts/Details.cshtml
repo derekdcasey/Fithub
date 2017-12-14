@@ -1,0 +1,63 @@
+﻿@model FitHub.ViewModels.NewWorkoutPlanViewModel
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="card demo-card-header-pic">
+    <div style="background-image:url('https://wallpapertag.com/wallpaper/full/9/2/7/448118-bodybuilding-wallpaper-hd-2017-1920x1200-download-free.jpg');" valign="bottom" class="card-header color-white no-border">@Model.WorkoutPlan.Title</div>
+    <div class="card-content">
+        @{var count = 1; }
+        <div class="list-block media-list">
+            <ul>
+                <li class="item-content"><div class="item-inner">Day @count</div></li>
+                @foreach (var workout in @Model.Workouts)
+                {
+                    
+                    if (workout.DayNumber == count)
+                    {
+                        <li class="item-content">
+                            <div class="item-media">
+                                <img src="" width="44">
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-title-row">
+                                    <div class="item-title">@workout.Exercise.Name</div>
+                                    <div class="item-after">@workout.DayNumber</div>
+                                </div>
+                                <div class="item-subtitle">@workout.Sets SETS of @workout.Reps REPS, REST @workout.RestInSeconds Secs </div>
+                            </div>
+                        </li>
+                    }
+                    else
+                    {
+                        count++;
+                <li class="item-content"><div class="item-inner">Day @count</div></li>
+                <li class="item-content">
+                    <div class="item-media">
+                        <img src="" width="44">
+                    </div>
+                    <div class="item-inner">
+                        <div class="item-title-row">
+                            <div class="item-title">@workout.Exercise.Name</div>
+                            <div class="item-after">@workout.DayNumber</div>
+                        </div>
+                        <div class="item-subtitle">@workout.Sets SETS of @workout.Reps REPS, REST @workout.RestInSeconds Secs </div>
+                    </div>
+                </li>
+                    }
+
+                }
+</ul>
+        </div>
+
+    </div>
+    <div class="card-footer">
+       
+        <p>tytt</p>
+        <p>test</p>
+        <p>tytt</p>
+    </div>
+</div>
+     <div class="content-block">&nbsp;</div>   
+
+
