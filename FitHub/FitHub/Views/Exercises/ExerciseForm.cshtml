@@ -1,0 +1,57 @@
+﻿@model FitHub.ViewModels.ExerciseFormViewModel
+@{
+    ViewBag.Title = "ExerciseForm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm("CreateWorkout", "Workouts"))
+{
+
+    <div class="list-block">
+        <ul>
+            <li>
+                <div class="item-content">
+                    <div class="item-inner">
+                        <div class="item-title">Name</div>
+                        <div class="item-input">
+                            @Html.TextBoxFor(m => m.Exercise.Name, new { @placeholder = "Exercise Name"})
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div class="item-content">
+                    <div class="item-inner">
+                        <div class="item-title">Description</div>
+                        <div class="item-input">
+                            @Html.TextAreaFor(m => m.Exercise.Description, new { @placeholder = "Exercise Description" })
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div class="item-content">
+                    <div class="item-inner">
+                        <div class="item-title">Muscle Group</div>
+                        <div class="item-input">
+                            @Html.TextBoxFor(m => m.Exercise.MuscleGroup, new { @placeholder = "Exercise Muscle Group" })
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div class="item-content">
+                    <div class="item-inner">
+                        <div class="item-title">Name</div>
+                        <div class="item-input">
+                            @Html.TextBoxFor(m => m.Exercise.Name, new { @placeholder = "Exercise Name" })
+                        </div>
+                    </div>
+                </div>
+            </li>
+    </ul>
+</div>

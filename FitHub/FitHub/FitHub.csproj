@@ -236,6 +236,10 @@
     <Compile Include="Migrations\201712141457375_modelsUpdated2.Designer.cs">
       <DependentUpon>201712141457375_modelsUpdated2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712162251058_AddDataAnnotations.cs" />
+    <Compile Include="Migrations\201712162251058_AddDataAnnotations.Designer.cs">
+      <DependentUpon>201712162251058_AddDataAnnotations.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Exercise.cs" />
@@ -246,6 +250,7 @@
     <Compile Include="Models\WorkoutPlan.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\ExerciseFormViewModel.cs" />
     <Compile Include="ViewModels\NewWorkoutPlanViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -346,10 +351,10 @@
     <Content Include="Views\Workouts\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutWorkOutTabs.cshtml" />
     <Content Include="Views\Workouts\Details.cshtml" />
+    <Content Include="Views\Exercises\ExerciseForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Exercises\" />
     <Folder Include="Views\WorkoutPlans\" />
   </ItemGroup>
   <ItemGroup>
@@ -389,6 +394,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712141457375_modelsUpdated2.resx">
       <DependentUpon>201712141457375_modelsUpdated2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712162251058_AddDataAnnotations.resx">
+      <DependentUpon>201712162251058_AddDataAnnotations.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
