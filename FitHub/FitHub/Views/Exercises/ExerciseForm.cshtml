@@ -5,9 +5,9 @@
 }
 
 
-@using (Html.BeginForm("CreateWorkout", "Workouts"))
+@using (Html.BeginForm("CreateWorkout", "Workouts", new { @enctype = "multipart/form-data" }))
 {
-
+    @Html.ValidationSummary()
     <div class="list-block">
         <ul>
             <li>
@@ -15,7 +15,8 @@
                     <div class="item-inner">
                         <div class="item-title">Name</div>
                         <div class="item-input">
-                            @Html.TextBoxFor(m => m.Exercise.Name, new { @placeholder = "Exercise Name"})
+                            @Html.TextBoxFor(m => m.Exercise.Name, new { @placeholder = "Exercise Name" })
+                            @Html.ValidationMessageFor(e => e.Exercise.Name)
                         </div>
                     </div>
                 </div>
@@ -27,6 +28,7 @@
                         <div class="item-title">Description</div>
                         <div class="item-input">
                             @Html.TextAreaFor(m => m.Exercise.Description, new { @placeholder = "Exercise Description" })
+                            @Html.ValidationMessageFor(e => e.Exercise.Description)
                         </div>
                     </div>
                 </div>
@@ -37,21 +39,26 @@
                     <div class="item-inner">
                         <div class="item-title">Muscle Group</div>
                         <div class="item-input">
-                            @Html.TextBoxFor(m => m.Exercise.MuscleGroup, new { @placeholder = "Exercise Muscle Group" })
+                         @*@Html.DropDownListFor(m => m.Exercise.MuscleGroupId, new SelectList(Model.Exercise.MuscleGroup, "Id", "Title"), "Which Workout")*@
+                            @Html.TextBoxFor(m => m.Exercise.MuscleGroup)
                         </div>
                     </div>
                 </div>
             </li>
-
             <li>
                 <div class="item-content">
                     <div class="item-inner">
-                        <div class="item-title">Name</div>
+                        <div class="item-title">@Html.LabelFor(e => e.Exercise.ImagePath)</div>
                         <div class="item-input">
-                            @Html.TextBoxFor(m => m.Exercise.Name, new { @placeholder = "Exercise Name" })
+                            <input type="file" name="ImageFile" class="button-big" required value="Upload Image"/>
                         </div>
                     </div>
                 </div>
             </li>
     </ul>
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(e => e.Exercise.Id)
+        <button type="submit" class="button button-fill button-big color-blue">Save</button>    
 </div>
+
+}

@@ -638,3 +638,6 @@ D:\Documents\IPD-10\ASP.NET\Project\FitHub\FitHub\obj\Debug\FitHub.csproj.CoreCo
 D:\Documents\IPD-10\ASP.NET\Project\FitHub\FitHub\obj\Debug\FitHub.dll
 D:\Documents\IPD-10\ASP.NET\Project\FitHub\FitHub\obj\Debug\FitHub.pdb
 D:\Documents\IPD-10\ASP.NET\Project\FitHub\FitHub\obj\Debug\FitHub.Migrations.AddDataAnnotations.resources
+D:\Documents\IPD-10\ASP.NET\Project\FitHub\FitHub\obj\Debug\FitHub.Migrations.AddMuscleGroupTable.resources
+D:\Documents\IPD-10\ASP.NET\Project\FitHub\FitHub\obj\Debug\FitHub.Migrations.PopulatemuscleGroups.resources
+D:\Documents\IPD-10\ASP.NET\Project\FitHub\FitHub\obj\Debug\FitHub.Migrations.fkMuscleGroups.resources

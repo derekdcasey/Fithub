@@ -1,0 +1,67 @@
+﻿@model IEnumerable<FitHub.Models.Exercise>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Buttons row as tabs controller -->
+<div class="buttons-row">
+    <!-- Link to 1st tab, active -->
+    <a href="#tab1" class="tab-link active button">My Workouts</a>
+    <!-- Link to 2nd tab -->
+    <a href="#tab2" class="tab-link button">All Workouts</a>
+    <!-- Link to 3rd tab -->
+
+</div>
+
+<!-- Tabs, tabs wrapper -->
+<div class="tabs">
+    <!-- Tab 1, active by default -->
+    <div id="tab1" class="tab active">
+        <div class="content-block">
+            @foreach (var e in Model)
+            {
+
+                <div class="card demo-card-header-pic">
+                    <div style="background-image:url('http://static.superiorwallpapers.com/images/lthumbs/2015-06/8383_Dumbbells-in-a-gym.jpg');" valign="bottom" class="card-header color-white no-border">Exercises</div>
+                    <div class="card-content">
+                        <div class="card-content-inner">
+                            <h2>@e.Name</h2>
+                            <p>@e.MuscleGroup</p>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        @Html.ActionLink("View", "Details", "Exercises", new { id = e.Id }, null)
+                        @Html.ActionLink("Edit", "Edit", "Exercises", new { id = e.Id }, null)
+                        @Html.ActionLink("Delete", "Delete", "Exercises", new { id = e.Id }, null)
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+    <!-- Tab 2 -->
+    <div id="tab2" class="tab">
+        <div class="content-block">
+            @foreach (var e in Model)
+            {
+                <div class="card demo-card-header-pic">
+                    <div style="background-image:url('https://wallpapertag.com/wallpaper/full/9/2/7/448118-bodybuilding-wallpaper-hd-2017-1920x1200-download-free.jpg');" valign="bottom" class="card-header color-white no-border">Exercises</div>
+                    <div class="card-content">
+                        <div class="card-content-inner">
+                            <h2>@e.Name</h2>
+                            <p>@e.MuscleGroup</p>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        @Html.ActionLink("View", "Details", "Exercises", new { id = e.Id }, null)
+                        @Html.ActionLink("Edit", "Edit", "Exercises", new { id = e.Id }, null)
+                        @Html.ActionLink("Delete", "Delete", "Exercises", new { id = e.Id }, null)
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+
+</div>

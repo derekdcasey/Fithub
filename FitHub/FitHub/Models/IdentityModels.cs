@@ -24,6 +24,7 @@ namespace FitHub.Models
         public DbSet<Workout> Workouts { get; set; }
         public DbSet<WorkoutPlan> WorkoutPlans { get; set; }
         public DbSet<UserFavorite> UserFavorites { get; set; }
+        public DbSet<MuscleGroup> MuscleGroups { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)

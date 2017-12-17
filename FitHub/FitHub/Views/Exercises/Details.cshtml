@@ -1,0 +1,28 @@
+﻿@model FitHub.Models.Exercise
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-block-title theme-bluegray">@Model.Name</div>
+
+
+
+<div class="card">
+    <img src="@Model.ImagePath" style="width:100%; height:100%;">
+    <div class="card-content">
+        <div class="card-content-inner">
+            <p>@Model.MuscleGroup</p>
+            <p>@Model.Description</p>
+        </div>
+    </div>
+    <div class="card-footer">
+        <a href="~/Exercises/Index" class="link external">Exercise list</a>
+        <a href="/Exercise/Edit/@Model.Id" class="link external">Update</a>
+        <a href="/Exercises/Delete/@Model.Id" class="link  external">Delete</a>
+    </div>
+</div>
+
+
+
+

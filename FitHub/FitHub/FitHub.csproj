@@ -240,11 +240,24 @@
     <Compile Include="Migrations\201712162251058_AddDataAnnotations.Designer.cs">
       <DependentUpon>201712162251058_AddDataAnnotations.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712171942219_AddMuscleGroupTable.cs" />
+    <Compile Include="Migrations\201712171942219_AddMuscleGroupTable.Designer.cs">
+      <DependentUpon>201712171942219_AddMuscleGroupTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712171943089_PopulatemuscleGroups.cs" />
+    <Compile Include="Migrations\201712171943089_PopulatemuscleGroups.Designer.cs">
+      <DependentUpon>201712171943089_PopulatemuscleGroups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712171952400_fkMuscleGroups.cs" />
+    <Compile Include="Migrations\201712171952400_fkMuscleGroups.Designer.cs">
+      <DependentUpon>201712171952400_fkMuscleGroups.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Exercise.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MuscleGroup.cs" />
     <Compile Include="Models\UserFavorite.cs" />
     <Compile Include="Models\Workout.cs" />
     <Compile Include="Models\WorkoutPlan.cs" />
@@ -352,9 +365,13 @@
     <Content Include="Views\Shared\_LayoutWorkOutTabs.cshtml" />
     <Content Include="Views\Workouts\Details.cshtml" />
     <Content Include="Views\Exercises\ExerciseForm.cshtml" />
+    <Content Include="Views\Exercises\Index.cshtml" />
+    <Content Include="Views\Exercises\Delete.cshtml" />
+    <Content Include="Views\Exercises\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="ImageUploads\" />
     <Folder Include="Views\WorkoutPlans\" />
   </ItemGroup>
   <ItemGroup>
@@ -397,6 +414,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712162251058_AddDataAnnotations.resx">
       <DependentUpon>201712162251058_AddDataAnnotations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712171942219_AddMuscleGroupTable.resx">
+      <DependentUpon>201712171942219_AddMuscleGroupTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712171943089_PopulatemuscleGroups.resx">
+      <DependentUpon>201712171943089_PopulatemuscleGroups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712171952400_fkMuscleGroups.resx">
+      <DependentUpon>201712171952400_fkMuscleGroups.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

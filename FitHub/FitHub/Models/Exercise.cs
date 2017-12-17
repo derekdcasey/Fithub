@@ -13,11 +13,13 @@ namespace FitHub.Models
         public string Name { get; set; }
         [Required][MaxLength(500)]
         public string Description { get; set; }
-        [Required]
-        [MaxLength(50)]
-        [Display(Name = "Muscle Group")]
         public string MuscleGroup { get; set; }
-        [Display(Name = "Image")][MaxLength(255)]
+        [Required]
+        [Display(Name = "Muscle Group")]
+        public int MuscleGroupId { get; set; }
+        [Display(Name = "Upload File")][MaxLength(255)]
         public string ImagePath { get; set; }
+
+        public HttpPostedFileBase ImageFile { get; set; }
     }
 }
